@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="hevodeco | design factory on metal making">
+    <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="../style-basic.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/vue@2.4.4/dist/vue.js"></script>
+    <title>日何百鐵</title>
+
+    <style>
+        .intro {
+            display: flex;
+            text-align: center;
+            font-size: 3rem;
+        }
+        
+        .intro>span {
+            font-size: 7rem;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="myApp">
+        <div class="container">
+
+            <div class="header">
+                <img class="logo" src="../imgs/logo.png">
+            </div>
+        </div>
+
+        <div v-html='navbar'></div>
+
+        <hr width=80% style="border-top:1px solid #ced7db">
+
+        <!--內容放置-->
+        <div class="container-fluid">
+            <div class="intro row">
+                <span class="col-md-2">&#91;</span>
+                <p class="col-md-8">非機械大量製造，也不是帶著距離的藝術品。由台灣傳統工廠老職人手工製作的日常<br>生活用品。希望讓數十載製作經驗延續，運用想像力創造鈑金可能。我們選擇賦予熟悉的鐵材<br>嶄新功能，結合多種樣貌。天天能使用且人人可擁有，在日常中發掘鐵之優美。
+                </p>
+                <span class="col-md-2">&#93;</span>
+                
+                
+            </div>
+        </div>
+
+
+
+
+
+
+        <hr width=80% style="border-top:1px solid #ced7db">
+
+        <div v-html='footer'></div>
+
+        <script src="../js/components.js"></script>
+    </div>
+</body>
+
+</html>

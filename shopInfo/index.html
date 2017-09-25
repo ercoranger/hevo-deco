@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="hevodeco | design factory on metal making">
+    <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="../style-basic.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/vue@2.4.4/dist/vue.js"></script>
+    <title>日何百鐵</title>
+</head>
+
+<body style="background-color:#d9fff5;">
+    <div class="myApp">
+        <div class="container">
+
+            <div class="header">
+                <img class="logo" src="../imgs/logo.png">
+            </div>
+        </div>
+
+        <div v-html='navbar'></div>
+
+        <hr width=80% style="border-top:1px solid #ced7db">
+
+        <!--內容放置-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>台灣</h3>
+                    <h6>網路商店</h6>
+                    <ol>
+                        <ul>博客來<a>www.xxxxxxxxx.com</a></ul>
+                        <ul>GQShop<a>dddddddddddddd</a></ul>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <hr width=80% style="border-top:1px solid #ced7db">
+
+        <div v-html='footer'></div>
+
+        <script src="../js/components.js"></script>
+    </div>
+</body>
+
+</html>

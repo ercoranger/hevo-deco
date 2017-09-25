@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="hevodeco | design factory on metal making">
+    <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="../style-basic.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/vue@2.4.4/dist/vue.js"></script>
+    <title>日何百鐵</title>
+
+</head>
+
+<body>
+    <div class="myApp">
+        <div class="container">
+
+            <div class="header">
+                <img class="logo" src="../imgs/logo.png">
+            </div>
+        </div>
+
+        <div v-html='navbar'></div>
+
+        <hr width=80% style="border-top:1px solid #ced7db">
+
+        <!--選單-->
+        <div class="container">
+            <div class="product-types col-md-2">
+                <ul class="list-unstyled">
+                    <li><a>Furniture | 家具</a></li>
+                    <li><a>Lighting | 燈具</a></li>
+                    <li><a>On the desk | 辦公用具</a></li>
+                    <li><a>Home Acessory | 家飾配件</a></li>
+                    <li><a>Odds and goods | 小物</a></li>
+                    <li><a>Art Pieces | 定製品</a></li>
+                    <hr style="border-top:1px dashed #ced7db">
+                    <li><a>F+ctory | 桌上的工廠</a></li>
+                </ul>
+
+            </div>
+
+            <!--產品縮圖-->
+            <div class="col-md-5">
+                <div class="thumbNails">
+                    <a v-on:click.prevent=""><img src="imgs/F_02as-d_3.jpg" /></a>
+                    <h3>Hopper 工業幾何筆筒</h3>
+                    <p>Pen/pencil vase</p>
+                    <span v-html="textureGavanized"></span>
+                    <span>⬤ ⬤ ⬤</span>
+                    <!--材質排列-->
+                </div>
+                <div class="thumbNails">
+                    <a onclick=""><img src="imgs/s2-1.jpg" /></a>
+                    <h3>Hopper</h3>
+                    <p>descriptions</p>
+                    <span>⬤ ⬤</span>
+                </div>
+
+            </div>
+
+            <div class="col-md-5">
+                <div class="thumbNails">
+                    <a><img src="imgs/s2-1.jpg" /></a>
+                    <h3>Hopper</h3>
+                    <p>descriptions</p>
+                    <span>⬤</span>
+                </div>
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+        <hr width=80% style="border-top:1px solid #ced7db">
+
+        <div v-html='footer'></div>
+    </div>
+    <script src="../js/components.js"></script>
+    <!--接api的方法
+    <script>
+    var resAction = function() {
+        if(this.readyState == 1){
+            console.log('loaing')
+        }
+        if (this.readyState == 4 && this.status == 200) {
+            console.log('end')
+            var data = JSON.parse(this.responseText)
+            var renderHtml = ''
+            
+            for (var i in data) {
+                console.log(data[i])
+                renderHtml += '<div>' + data[i].title + '</div>'
+            }
+            document.querySelector('div').innerHTML = renderHtml;
+        }
+        
+    }
+    var getApi = new XMLHttpRequest();
+    getApi.onreadystatechange = resAction;
+    getApi.open("GET", "red要給我的api");
+    getApi.send();
+</script>-->
+</body>
+
+</html>
