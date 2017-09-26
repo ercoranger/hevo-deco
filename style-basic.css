@@ -164,7 +164,8 @@ input[type="submit"] {
     width: 100%;
     padding: 0rem;
     position: relative;
-    margin-top: -105.5%;/*未完全貼合*/
+    margin-top: -100%;
+    vertical-align: top;
     z-index: -99;
 }
 
