@@ -44,11 +44,31 @@
             </div>
 
             <div class="col-md-10">
-                <div class="product-detail col-md-7">
-                    <img class="turn-on" src="imgs/F_02as-d_3.jpg" />
+                <div class="product-detail col-md-8">
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="imgs/F_02as-d_3.jpg" alt="1">
+                            </div>
+                            <div class="item">
+                                <img src="imgs/F_02b.jpg" alt="2">
+                            </div>
+                        </div>
+
+                        <!-- Controls-->
+                        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                            <span class="sr-only">◀</span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                             <span class="sr-only">▶</span>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="product-intro col-md-3">
+                <div class="product-intro col-md-2">
                     <h1><b>Hopper</b></h1>
                     <h3>工業幾何筆筒</h3>
                     <p>巴在是來濟雙的往精政張球的學驗關作後走文，總飛文才表文有她主聲音立，女飛者理長生可受、班灣有電光候者室想程國、收器成在住人新至民上對全因保種這正計基為、再我濟可力。民書國我金防黃行科？結從業精性公製子視，寫也的各能通喜……的坐藝水到心地上合的男的後點放小學不們身要流地一；養怕極木。不片公參西說球己毛子情一加，品表的合。</p>
@@ -66,29 +86,32 @@
                         <p>長：<span>170cm</span></p>
                         <p>寬：<span>200cm</span></p>
                         <P>高：<span>200cm</span></P>
-                        <span onmouseover="infoOn()" onmouseout="infoOff()">&#9874;</span>
+                        <span onmouseover="infoOn()" onmouseout="infoOff()">▨</span>
                     </div>
 
                     <div class="info-customize fade-in">
                         <p>可接受訂製, 請直接聯繫我們告知需求</p>
                     </div>
 
-                    <!--div class="price">
-                        <h3>10000TWD</h3>
-                    </div-->
-
                     <button>前往購買 / 訂購</button>
 
                 </div>
 
+                <hr width=100% style="border-top:1px dashed #ced7db">
+                <div class="other-products turn-on-delay">
+                    <p>其他推薦產品</p>
+                    <a><img title="工業幾何筆筒" src="imgs/s2-1.jpg"></a>
+                    <a><img title="工業幾何筆筒" src="imgs/s2-1.jpg"></a>
+                    <a><img title="工業幾何筆筒" src="imgs/s2-1.jpg"></a>
+                </div>
 
             </div>
-
-
         </div>
 
 
         <hr width=80% style="border-top:1px solid #ced7db">
+
+
 
         <div v-html='footer'></div>
 
@@ -98,10 +121,13 @@
     <script>
         //顯示與關閉可訂製訊息
         function infoOn() {
-            document.querySelector(".info-customize").style.display = "block";}
+            document.querySelector(".info-customize").style.display = "block";
+        }
 
         function infoOff() {
-            document.querySelector(".info-customize").style.display = "none";}
+            document.querySelector(".info-customize").style.display = "none";
+        }
+
     </script>
 
 </body>

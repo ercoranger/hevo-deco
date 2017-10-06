@@ -44,9 +44,19 @@ a:hover {
 .nav {
     margin-top: 8rem;
     display: flex;
-    /*如何正確的置中*/
     align-items: center;
     justify-content: space-around;
+}
+
+.top-bar {
+    width: 90%;
+    left: 5%;
+    position: fixed;
+    margin-top: -8rem;
+    padding-bottom: 1rem;
+    z-index: 1;
+    background: rgba(255%, 255%, 255%, 0.8);
+    filter: alpha(opacity=80);
 }
 
 .nav-item > a {
@@ -57,13 +67,15 @@ a:hover {
 
 .nav-item > a:hover {
     border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
     background-color: #ced7db;
-    /*沒有變化*/
 }
 
 .nav-item > a:active {
     border-radius: 2rem;
-    /*沒有反應*/
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
 }
 
 
@@ -160,6 +172,10 @@ input[type="submit"] {
     margin-bottom: 5rem;
 }
 
+.c-right{
+    right: -2rem;
+}
+
 .cover {
     width: 100%;
     padding: 0rem;
@@ -184,24 +200,54 @@ input[type="submit"] {
     font-size: 2rem;
     font-weight: 400;
     margin-bottom: 0.3rem;
-    margin-top: 1.2rem;
+    margin-top: 0.1rem;
     color: #000a12;
 }
 
 .thumbNails > span {
-    display: block;
+    display: inline-block;
     float: right;
     margin-top: -4.5rem;
     font-size: 1.7rem;
+    text-align: right;
 }
 
-.product-detail > img {
-    width: 100%;
+.thumbNails > span > img {
+    width: 1.7rem;
+    margin-right: 1rem;
 }
+
+.thumbNails > span img:last-child {
+    margin-right: 0;
+}
+
+/*---產品細節頁開始 左半圖輪播---*/
+
+.product-detail .carousel-control {
+    opacity: 0.5;
+    background-image: none;
+    filter: none;
+}
+
+.product-detail .carousel-control:hover {
+    opacity: 0.9;
+}
+
+.product-detail .glyphicon {
+    font-size: 1.5rem;
+    top: 50%;
+}
+
+.product-detail .carousel-inner {
+    margin-bottom: 5rem;
+}
+
+
+/*---右半介紹文字區---*/
 
 .product-intro {
     margin-left: 1rem;
-    width: 40%;
+    width: 30%;
     letter-spacing: 0.1rem;
 }
 
@@ -216,10 +262,15 @@ input[type="submit"] {
     letter-spacing: 0.3rem;
 }
 
+.product-intro > p{
+    width: 140%;
+}
+
 .textures {
     display: flex;
     width: 100%;
     height: 8vh;
+    margin-top: 1rem;
     align-items: center;
     justify-content: flex-start;
 
@@ -227,6 +278,11 @@ input[type="submit"] {
 
 .textures > a {
     cursor: pointer;
+
+}
+
+.textures > a:hover {
+    opacity: 0.7;
 }
 
 .textures > a > img {
@@ -235,6 +291,7 @@ input[type="submit"] {
 }
 
 .dimensions {
+    margin-top: 1rem;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -247,7 +304,7 @@ input[type="submit"] {
 .info-customize {
     display: none;
     position: absolute;
-    width: 60%;
+    width: 65%;
     top: 64%;
     right: -12vh;
     background-color: #b1deda;
@@ -265,7 +322,56 @@ input[type="submit"] {
     color: white;
     border-radius: 2rem;
     padding: 1rem 2rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
     letter-spacing: 0.1rem;
+}
 
+.product-intro > button:hover {
+    box-shadow: 0px 0px 3px #36464e;
+    -webkit-box-shadow: 0px 0px 3px #36464e;
+    -moz-box-shadow: 0px 0px 3px #36464e;
+}
+
+/*----其他相關產品----*/
+
+.other-products {
+    margin-bottom: 2rem;
+}
+
+.other-products > p {
+    text-align: center;
+    margin-bottom: 2rem;
+    opacity: 0.6;
+}
+
+.other-products > a {
+    text-align: center;
+    /* Firefox */
+    -moz-transition-property: opacity;
+    -moz-transition-duration: 0.2s;
+    -moz-transition-delay: 0.2s;
+    /* WebKit */
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: 0.2s;
+    -webkit-transition-delay: 0.2s;
+    /* Opera */
+    -o-transition-property: opacity;
+    -o-transition-duration: 0.2s;
+    -o-transition-delay: 0.2s;
+
+    transition-property: opacity;
+    transition-duration: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.other-products > a:hover {
+    opacity: 0.5;
+}
+
+.other-products img:first-child {
+    margin-left: 2.2%;
+}
+
+.other-products img {
+    width: 30%;
 }
