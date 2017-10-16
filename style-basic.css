@@ -21,12 +21,15 @@ a {
 a {
     color: black;
     cursor: auto;
+    transition: 0.3s;
 }
 
 a:hover {
+    color: black;
     cursor: crosshair;
-}
 
+
+}
 
 /*--header頂層區域--*/
 
@@ -60,24 +63,16 @@ a:hover {
 }
 
 .nav-item > a {
-    color: black;
     letter-spacing: 0.3rem;
     margin-right: 2rem;
+    border-bottom: 0.5rem solid transparent;
 }
 
 .nav-item > a:hover {
-    border-radius: 2rem;
-    -webkit-border-radius: 2rem;
-    -moz-border-radius: 2rem;
-    background-color: #ced7db;
+    background-color: transparent !important;
+    border-bottom: 0.5rem dotted #b0bec5;
+    text-decoration: none;
 }
-
-.nav-item > a:active {
-    border-radius: 2rem;
-    -webkit-border-radius: 2rem;
-    -moz-border-radius: 2rem;
-}
-
 
 /*--footer底層區域--*/
 
@@ -99,6 +94,15 @@ a:hover {
     width: 75%;
 }
 
+.footer a {
+    border-bottom: 0.3rem solid transparent;
+}
+
+.footer a:hover {
+    text-decoration: none;
+    border-bottom: 0.3rem solid #b0bec5;
+
+}
 
 /*email輸入框*/
 
@@ -125,11 +129,17 @@ input[type="submit"] {
 }
 
 .carousel-indicators {
-    bottom: -0.6rem;
+    bottom: -0.5rem;
 }
 
 .carousel-indicators > li {
     background-color: #778f9b;
+    border: 0;
+}
+
+.carousel-indicators .active{
+    background-color: #ced7db;
+    border: 0;
 }
 
 .carousel-inner {
@@ -167,12 +177,22 @@ input[type="submit"] {
     margin-bottom: 1rem;
 }
 
+.product-types a {
+    border-bottom: 0.3rem solid transparent;
+    text-decoration: none;
+}
+
+.product-types a:hover {
+    border-bottom: 0.3rem solid #b0bec5;
+    text-decoration: none;
+}
+
 .thumbNails {
     letter-spacing: 0.1rem;
     margin-bottom: 5rem;
 }
 
-.c-right{
+.c-right {
     right: -2rem;
 }
 
@@ -262,7 +282,7 @@ input[type="submit"] {
     letter-spacing: 0.3rem;
 }
 
-.product-intro > p{
+.product-intro > p {
     width: 140%;
 }
 
@@ -374,4 +394,112 @@ input[type="submit"] {
 
 .other-products img {
     width: 30%;
+}
+
+/*-----------------------shopInfo 銷售通路列表-------------------------*/
+
+.shop-info {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+}
+
+.shop-info ul {
+    list-style-type: none;
+    letter-spacing: 0.1rem;
+}
+
+.shop-info h3 {
+    font-size: 5rem;
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+}
+
+.shop-info h6 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+
+.shop-info a {
+    font-size: 3rem;
+    border-bottom: 0.5rem solid #fff;
+}
+
+.shop-info a:hover {
+    color: black;
+    border-bottom: 0.5rem solid #cfd8dc;
+    text-decoration: none;
+}
+
+/*--------------------------about 關於百鐵-------------------------------*/
+
+.intro {
+    display: flex;
+    text-align: center;
+    margin: 2rem 0 5rem 0;
+}
+
+.intro > p {
+    font-size: 2.5rem;
+    padding: 0;
+    line-height: 4.2rem;
+    letter-spacing: 0.1rem;
+}
+
+.intro > span {
+    font-size: 7rem;
+    padding: 0;
+    text-align: left;
+}
+
+.intro > span:first-child {
+    text-align: right;
+}
+
+.brand-banner {
+    margin-bottom: 5rem;
+}
+
+.brand-banner img {
+    width: 100%;
+}
+
+.brand-story img {
+    width: 100%;
+}
+
+.brand-story > .row {
+    margin-bottom: 12rem;
+}
+
+.brand-story > .row:nth-child(2){
+    text-align: right;
+}
+
+.brand-story h2 {
+    font-size: 5rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    line-height: 6rem;
+}
+
+.brand-story h4 {
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    margin: 2rem 0 2rem 0;
+}
+
+.odd-svg {
+    margin-left: 1rem;
+}
+
+.even-svg {
+    margin-right: 1rem;
+}
+
+.brand-story p {
+    font-size: 1.6rem;
+    letter-spacing: 0.3rem;
+    line-height: 2.4rem;
 }

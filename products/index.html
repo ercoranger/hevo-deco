@@ -123,29 +123,8 @@
                 }).scroll();　
             });
         });
-
-        /*接api的方法(現在不用)
-    var resAction = function() {
-        if(this.readyState == 1){
-            console.log('loaing')
-        }
-        if (this.readyState == 4 && this.status == 200) {
-            console.log('end')
-            var data = JSON.parse(this.responseText)
-            var renderHtml = ''
-            
-            for (var i in data) {
-                console.log(data[i])
-                renderHtml += '<div>' + data[i].title + '</div>'
-            }
-            document.querySelector('div').innerHTML = renderHtml;
-        }
-        
-    }
-    var getApi = new XMLHttpRequest();
-    getApi.onreadystatechange = resAction;
-    getApi.open("GET", "red要給我的api");
-    getApi.send();*/
+        //顯示當前頁
+        document.getElementById('nav-2').style.borderBottom = "0.5rem solid #b0bec5";
     </script>
 </body>
 
